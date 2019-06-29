@@ -2,7 +2,7 @@
 
 This repository contains the code and scripts required to replicate the the experiments that reported in the paper titled "Link Prediction via Higher-Order Motif Features".
  The code includes:
-1. Sample a set of real edges from the dataset.
+1. Sample a set of positive edges from the dataset.
 2. Sample a set of negative edges from the dataset.
 3. Preparing the graph dataset in the input format of Arabesque Framework (http://arabesque.io/). 
 4. Modification used to extract motifs using Arabesque Framework (http://arabesque.io/)
