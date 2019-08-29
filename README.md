@@ -7,4 +7,4 @@ This repository contains the code and scripts required to replicate the the expe
 3. Preparing the graph dataset in the input format of Arabesque Framework (http://arabesque.io/). 
 4. Modification used to extract motifs using Arabesque Framework (http://arabesque.io/)
 5. Aggregates motifs for each edge in the sample (positve and negative).
-6. Compute different graph teachniques for Link preidction including: (Common Neighbors, Jaccard Coefficient, Adamic/Adar,    Preferential Attachment,  Rooted PageRank, Katz Index).
+6. Compute different graph teachniques for Link prediction including: (Common Neighbors, Jaccard Coefficient, Adamic/Adar,    Preferential Attachment,  Rooted PageRank, Katz Index).
