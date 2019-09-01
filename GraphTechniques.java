@@ -11,18 +11,14 @@ import static java.util.stream.Collectors.toList;
 public class GraphTechniques {
     // the graph
     public static HashMap<Integer, ArrayList<Integer>> hash = new HashMap<Integer, ArrayList<Integer>>();
-
-//    public static HashMap<Integer, ArrayList<Integer>> realSet = new HashMap<Integer, ArrayList<Integer>>();
-
-
     // the sample
-
     public static HashMap<Integer, ArrayList<Integer>> edgeSet = new HashMap<Integer, ArrayList<Integer>>();
     // nodes & number of connections
     public static HashMap<Integer, Integer> nodes = new HashMap<Integer, Integer>();
    // nodes & its degree
    public static  HashMap<Integer, Double> nodes_value = new HashMap<Integer, Double>();
 
+   // keep track of the processed edges
     public static HashMap<Integer, Integer> process_edges = new HashMap<Integer, Integer>();
    //
    public static ArrayList<Integer> DegreeReal = new ArrayList<Integer>();
@@ -30,7 +26,7 @@ public class GraphTechniques {
 
    // variables used for paths search
      public static List<Integer>[] pathToNode = null;
-    public static LinkedList<Integer> queue = null;//new LinkedList<Integer>();
+    public static LinkedList<Integer> queue = null;
     static boolean  visited[]  = new boolean[hash.size()];
     static int countLevel =0;
     public static  boolean[] includedInPath= null;
@@ -102,7 +98,6 @@ public class GraphTechniques {
     public static void read_edgeSample(String fileName) {
 
         String line = null;
-   //     String fileName = "/Users/dewet/Desktop/yarab/Others/US/realListUS";
         HashSet<String> fake = new HashSet<String>();
         try {
             // FileReader reads text files in the default encoding.
@@ -166,7 +161,6 @@ public class GraphTechniques {
         }
     }
 
-
     /* compute the degree of each node.*/
     public static void compute_node_degree() {
         //degree based on adamic
@@ -177,7 +171,6 @@ public class GraphTechniques {
                 nodes_value.put(entry.getKey(), 0.0);
             else
                 nodes_value.put(entry.getKey(), Math.log10(1 / (float)neighbors.size()));
-
 
         }
     }
@@ -202,7 +195,7 @@ public class GraphTechniques {
 
     /* compute the number of time the destination has been visited
      (starting from specific source) by random walk
-     The reset paramter used to re-initialize the random walk from the source if the destiniation was mot reached within specific number of steps.
+     The reset paramter used to re-initialize the random walk from the source if the destination was mot reached within specific number of steps.
      */
 
 
@@ -331,7 +324,7 @@ public class GraphTechniques {
 
         }
 
-        return paths; //pathCounter;
+        return paths;
     }
    /**/
 
@@ -426,8 +419,6 @@ public class GraphTechniques {
         for (Map.Entry<Integer, ArrayList<Integer>> entry : hash.entrySet()) {
 
             ArrayList<Integer> neighborslist = entry.getValue();
-            ///degree of real edges for statistics
-            DegreeReal.add(neighborslist.size());
             for (int i = 0; i < neighborslist.size(); i++) {
                 ArrayList<Integer> Nneighbors = hash.get(neighborslist.get(i));
                 List<Integer> common = Nneighbors.stream().filter(neighborslist::contains).collect(toList());
