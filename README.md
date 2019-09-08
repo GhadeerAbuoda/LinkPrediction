@@ -6,12 +6,12 @@ This repository contains the code and scripts required to replicate the experime
 2. Sample a set of negative edges from the dataset.
 3. Preparing the graph dataset in the input format of the <strong> Arabesque </strong> framework (http://arabesque.io/). 
 
-These steps can be done using src/Sampling.java file using the following commands:
-     ### Compile:
+* These steps can be done using src/Sampling.java file using the following commands:
+     *   Compile:
               javac Sampling.java
-     ### Run:
+     *   Run:
               java Sampling <input graph file>  <number of edges in the sample>
-     ### Example:
+     *   Example:
               java Sampling Graph.txt 1000
 
 4. Extracting motifs. In this project, we use <strong> Arabesque </strong> framework (http://arabesque.io/). Any framework can be used for extracting the motifs from the graph.
