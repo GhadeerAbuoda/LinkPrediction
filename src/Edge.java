@@ -1,4 +1,4 @@
-package LinkPrediction;
+package src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,9 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 /**
- * Created by dewet on 2/13/18.
+ * Created by Ghadeer on 2/13/18.
+ *
+ * An representation of the edge of
  */
 public class Edge {
 

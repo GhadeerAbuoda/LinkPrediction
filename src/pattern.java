@@ -1,4 +1,4 @@
-package LinkPrediction;
+package src;
 
 /**
  * Created by dewet on 7/25/17.

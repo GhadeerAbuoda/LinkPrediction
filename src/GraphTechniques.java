@@ -1,4 +1,4 @@
-package LinkPrediction;
+package src;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 import static java.util.stream.Collectors.toList;
 
 /**
- * Created by dewet on 8/30/19.
+ * Created by Ghadeer on 8/30/19.
  */
 public class GraphTechniques {
     // the graph
