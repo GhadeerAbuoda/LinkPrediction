@@ -5,6 +5,28 @@ import java.util.*;
 
     /**
      * Created by Ghadeer on 8/28/19.
+     * The main task of this file is preparing a sampleset from the graph which includes:
+     * 1) Select a set of random edges from the graph to act as positive class edges.
+     * 2) Prepare a set of 'Fake' edges to form the Negative class based on i) A pair of random unconnected vertices ii) A controllable distance between the unconnected vertices.
+     * 3) Create a new graph with the 'negative' edges inserted.
+     * 4) Optional: Prepare the graph in the Arabesque's input format to extract the motifs. You can replace this step by different method
+     *
+     * The input is the graph where the graph is a list of edges in the following format:
+     *  edge1
+     *  edge2
+     *  ..
+     *  edgeN
+     *  The edge is V1 V2. where V1 is the source vertex and V2 is the destination Vertex.
+     *  The output includes:
+     *  1) 'realList' which is the set of positive edges in the format
+     *   edge1
+     *   edge2
+     *  2) 'FakeList' which is the set of negative edges in the same format.
+     *  3) 'arabesque-edges.graph' which is the the input graph for Arabesque. You can read more about the format here: https://github.com/qcri/Arabesque/tree/spark-2.0
+     *  Run:
+     *  java <input graph file>  <number of edges in the sample>
+     *  Example:  java Graph.txt 1000
+     *
      */
     public class Sampling {
 
@@ -15,7 +37,6 @@ import java.util.*;
 
         // The set of random edges from the graph - positive edges
         public static HashMap<Integer, ArrayList<Integer>> RandomEdges = new HashMap<Integer, ArrayList<Integer>>();
-
 
         // the new graph of the sampled positive edges with the added negative edges.
         public static HashMap<Integer, ArrayList<Integer>> newGraph = new HashMap<Integer, ArrayList<Integer>>();
@@ -36,7 +57,6 @@ import java.util.*;
 
         }
 
-
         /*
         *    Generate new ID for the new node.
         *
@@ -54,9 +74,7 @@ import java.util.*;
             if (hashIDs.get(candidateId) == null) {
                 hashIDs.put(candidateId, vertex);
 
-
             }
-
             return candidateId;
 
         }
@@ -557,10 +575,10 @@ import java.util.*;
                     random_negative_edges(edges,  3); //3 will be the smallest one, i count vertices.
                     hash= combine();
                     hash = checkSelfLoop();
-                    save_edged_Arabesque( args[2]); // "arabesque-with-all.graph"
+                    save_edged_Arabesque( "arabesque-edges.graph"); // "arabesque-with-all.graph"
 
                 } catch (NumberFormatException e) {
-                    System.err.println("Argument" + args[2] + " must be an integer.");
+                    System.err.println("Argument" + args[1] + " must be an integer.");
                     System.exit(1);
                 }
             }
