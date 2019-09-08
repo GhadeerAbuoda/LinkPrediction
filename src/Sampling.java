@@ -23,9 +23,12 @@ import java.util.*;
      *   edge2
      *  2) 'FakeList' which is the set of negative edges in the same format.
      *  3) 'arabesque-edges.graph' which is the the input graph for Arabesque. You can read more about the format here: https://github.com/qcri/Arabesque/tree/spark-2.0
+     *  Compile:
+     *          javac Sampling.java
      *  Run:
-     *  java <input graph file>  <number of edges in the sample>
-     *  Example:  java Graph.txt 1000
+     *          java Sampling <input graph file>  <number of edges in the sample>
+     *  Example:
+     *          java Sampling Graph.txt 1000
      *
      */
     public class Sampling {
