@@ -11,8 +11,7 @@ import java.util.*;
  * 2) Reading the edge sampleset. (In this example, the sample of real edges has been read from file 'realList;)
  * 3) Parsing the detected motifs and generating a representation for each pattren.
  * 4) Aggregating the counting of the motifs for the same pattren if it occurs multiple times for the same edge.
- * 3) Generating a file for each edge, set of pattrens ,and their counts.
- * 4)
+ * 5) Generating a file for each edge, set of pattrens, and their counts.
  *
  *  The input contains i) The output of Aarabesque. ii) the sampleset (realList).
  *  The output includes:
