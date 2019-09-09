@@ -15,5 +15,13 @@ This repository contains the code and scripts required to replicate the experime
                 java Sampling Graph.txt 1000
 
 4. Extracting motifs. In this project, we use <strong> Arabesque </strong> framework (http://arabesque.io/). Any framework can be used for extracting the motifs from the graph.
+
 5. Aggregating motifs for each edge in the sample (positive and negative).
+* The Aggregation can be done using src/Aggregation.java file using the following commands:
+     *   ##### Compile:
+                javac Aggregation.java
+     *   ##### Run:
+                java Aggregation <arabesque output file>  <pattren file output>  <features file output>
+     *   ##### Example:
+                java Aggregation arabesque_output pattren_found motifs_Edges
 6. Computing different graph techniuqes for link prediction including: (Common Neighbors, Jaccard Coefficient, Adamic/Adar,    Preferential Attachment,  Rooted PageRank, Katz Index).
