@@ -21,7 +21,7 @@ This repository contains the code and scripts required to replicate the experime
      *   ##### Compile:
                 javac Aggregation.java
      *   ##### Run:
-                java Aggregation <arabesque output file>  <pattren file output>  <features output file>
+                java Aggregation <arabesque output file>  <pattren file output>  <features file output>
      *   ##### Example:
                 java Aggregation arabesque_output pattren_found motifs_Edges
 6. Computing different graph techniuqes for link prediction including: (Common Neighbors, Jaccard Coefficient, Adamic/Adar,    Preferential Attachment,  Rooted PageRank, Katz Index).
