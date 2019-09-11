@@ -2,8 +2,11 @@ package src;
 
 /**
  * Created by dewet on 7/25/17.
+ * A String representation of the motif's pattren . Used in internal comparison only.
  */
 public class pattern {
+    
+
 
     private String patternStr;
     private int count;

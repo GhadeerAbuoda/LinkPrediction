@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Created by Ghadeer on 2/13/18.
  *
- * An representation of the edge of
+ * An representation of the edge of the graph. Used in few computations
  */
 public class Edge {
 
