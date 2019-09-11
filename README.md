@@ -25,3 +25,10 @@ This repository contains the code and scripts required to replicate the experime
      *   ##### Example:
                 java Aggregation arabesque_output pattren_found motifs_Edges
 6. Computing different graph techniuqes for link prediction including: (Common Neighbors, Jaccard Coefficient, Adamic/Adar,    Preferential Attachment,  Rooted PageRank, Katz Index).
+ * The method computed for bidirectioanl, unweighted Graph. 
+     *  ##### Compile:
+                javac GraphTechniques.java
+     *  ##### Run:
+               java GraphTechniques <Graph file>  <edge sample file>
+     *  ##### Example:
+               java GraphTechniques Graph.text  sample_edges
