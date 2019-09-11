@@ -7,6 +7,30 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Created by Ghadeer on 8/30/19.
+ *
+ * The main task of this file is computing different graph topological techniques that used for comparsion with motifs
+ * The techniques are:
+ * 1) Common Neighbour
+ * 2) Adamic Adar.
+ * 3) Jaccard coefficient
+ * 4) Preferential Attachment
+ * 5) Rooted Page Rank (in the code the implementation of "Random Walk" approach.
+ * 6) Katz (in the code the implementation between two nodes based on the number of paths).
+ *
+ *  The input contains i) The original Graph. ii) the sampleset (realList for example).
+ *  The output includes:
+ *  1) techniques_results file which contains the results in the format:
+ *   edge1 , Value1, Value2, Value3.....ValueN (As N is the number of different techniques computed and valuei is the result)
+ *   edge2,..
+ *   edgeM  (As M is the number of edges in the sampleset).
+ *
+ *  Compile:
+ *          javac GraphTechniques.java
+ *  Run:
+ *          java GraphTechniques <Graph file>  <edge sample file>
+ *  Example:
+ *          java GraphTechniques Graph.text  sample_edges
+ *
  */
 public class GraphTechniques {
     // the graph
@@ -25,7 +49,7 @@ public class GraphTechniques {
 
 
    // variables used for paths search
-     public static List<Integer>[] pathToNode = null;
+    public static List<Integer>[] pathToNode = null;
     public static LinkedList<Integer> queue = null;
     static boolean  visited[]  = new boolean[hash.size()];
     static int countLevel =0;
@@ -73,8 +97,8 @@ public class GraphTechniques {
 
             // Always close files.
             bufferedReader.close();
-            System.out.println("all real" + hash.keySet().size());
-            System.out.println("all 0 " + hash.get(0).toString());
+            //System.out.println("all real" + hash.keySet().size());
+            // System.out.println("all 0 " + hash.get(0).toString());
 
 
         } catch (FileNotFoundException ex) {
