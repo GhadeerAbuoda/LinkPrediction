@@ -17,7 +17,7 @@ This repository contains the code and scripts required to replicate the experime
 4. Extracting motifs. In this project, we use <strong> Arabesque </strong> framework (http://arabesque.io/). Any framework can be used for extracting the motifs from the graph.
 
 5. Aggregating motifs for each edge in the sample (positive and negative).
-* The Aggregation can be done using src/Aggregation.java file using the following commands:
+* The Aggregation can be done using src/Aggregation.java file (only based on Arabesque's output) using the following commands:
      *   ##### Compile:
                 javac Aggregation.java
      *   ##### Run:
